@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+    background-color: #F2F2F2;
+    font-family: cursive;
+}
+
+.top {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.main {
+    margin-left: 180px;
+    margin-right: 200px;
+    background-color: #DDCAD9;
+    padding: 20px 20px 100px 200px;
+    border-radius: 30px;
+}
+
+table td,th {
+    padding: 30px;
+    border: dashed 3px #7C616C;
+}
+
+#td1,#td3,#td5 {
+    background: #EAFDF8;
+    color: #7C616C;
+}
+
+#td2,#td4,#td6 {
+    background: #E5E9EC;
+    color: #7C616C;
+}
+
+table {
+    border-collapse: collapse;
+    border: dashed 2px #7C616C;
+}
+
+img head {
+    size: 80%;
+}
+
+.moji1,.moji2 {
+    background: linear-gradient(transparent 50%,#EAFDF8 50%);
+    color: #7C616C;
+}
+
+.label {
+    color: #7C616C;
+}
+
+#submit {
+    border-radius: 5px;
+    color: #7C616C;
+    background-color: #EAFDF8;
+}
+

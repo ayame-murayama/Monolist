@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#greetings .morning {
+  color: green;
+}
+#greetings .afternoon {
+  color: red;
+}
+#greetings .evening {
+  color: blue;
+}
+
+body {
+    background-color: red;
+}
