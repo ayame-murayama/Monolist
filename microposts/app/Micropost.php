@@ -12,4 +12,10 @@ class Micropost extends Model
     {
         return $this->belongsTo(User::class);
     }
+    
+    public function favorer()
+    {
+        return $this->belongsToMant(User::class)->withTimestamps();
+    }
+
 }

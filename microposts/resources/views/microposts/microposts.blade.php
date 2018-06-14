@@ -18,6 +18,7 @@
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                     {!! Form::close() !!}
                 @endif
+                @include('favo.favo_button',['user' => $user])
             </div>
         </div>
     </li>

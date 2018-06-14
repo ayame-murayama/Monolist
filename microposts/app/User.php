@@ -79,4 +79,33 @@ public function feed_microposts()
         $follow_user_ids[] = $this->id;
         return Micropost::whereIn('user_id', $follow_user_ids);
     }
+    
+public function favorings()
+{
+    return $this->belongsToMany(Micropost::class,'favorite','user_id','favorite_id')->withTimestamps();
+}
+public function favo($favoId)
+{
+    $exist = $this->is_favoring($favoId);
+    if($exist)
+    {
+        return false;
+    } else{
+        $this->favorings()->attach($favoId);
+        return true;
+    }
+}
+public function unfavo($favoId)
+{
+    $exist = $this->is_favoring($favoId);
+    if($exist){
+        $this->favorings()->detach($favoId);
+        return true;
+    } else {
+        return false;
+    }
+}
+public function is_favoring($favoId) {
+    return $this->favorings()->where('favorite_id',$favoId)->exists();
+}
 }
